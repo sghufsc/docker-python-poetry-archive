@@ -2,11 +2,7 @@ FROM python:3.11
 
 MAINTAINER Gustavo Simões <gustavo.simoes@grad.ufsc.br>
 
-ENV HOME=/usr/local/lib
-
-RUN curl -sSL https://install.python-poetry.org | python
-
-ENV PATH=$HOME/.poetry/bin:$PATH
+RUN curl -sSL https://install.python-poetry.org | python3 -
 
 RUN poetry --version
 
