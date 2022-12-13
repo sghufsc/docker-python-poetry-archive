@@ -1,11 +1,7 @@
-FROM python:3.11
+FROM python:3.11.1-slim-bullseye
 
-MAINTAINER Gustavo Simões <gustavo.simoes@grad.ufsc.br>
+ENV POETRY_VERSION=1.3.1
 
-RUN curl -sSL https://install.python-poetry.org | python3 -
+RUN pip install --no-cache-dir poetry==$POETRY_VERSION
 
 RUN poetry --version
-
-WORKDIR /app
-
-CMD ["poetry", "--version"]
