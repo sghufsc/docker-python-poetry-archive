@@ -4,7 +4,7 @@ MAINTAINER Gustavo Simões <gustavo.simoes@grad.ufsc.br>
 
 ENV HOME=/usr/local/lib
 
-RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+RUN curl -sSL https://install.python-poetry.org | python
 
 ENV PATH=$HOME/.poetry/bin:$PATH
 
